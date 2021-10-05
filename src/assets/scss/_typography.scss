@@ -1,0 +1,31 @@
+@font-face {
+  @include fontFamily($name: 'Open Sans', $weight: 300, $type: 'Light');
+}
+
+@font-face {
+  @include fontFamily($name: 'Open Sans', $weight: 400, $type: 'Regular');
+}
+
+@font-face {
+  @include fontFamily($name: 'Open Sans', $weight: 600, $type: 'SemiBold');
+}
+
+@font-face {
+  @include fontFamily($name: 'Open Sans', $weight: 700, $type: 'Bold');
+}
+
+@font-face {
+  @include fontFamily($name: 'Comfortaa', $weight: 300, $type: 'Light');
+}
+
+@font-face {
+  @include fontFamily($name: 'Comfortaa', $weight: 400, $type: 'Regular');
+}
+
+@font-face {
+  @include fontFamily($name: 'Comfortaa', $weight: 600, $type: 'SemiBold');
+}
+
+@font-face {
+  @include fontFamily($name: 'Comfortaa', $weight: 700, $type: 'Bold');
+}
