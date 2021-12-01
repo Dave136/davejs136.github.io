@@ -11,7 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-
 import Menu from "./components/Menu.vue";
 import Header from './components/TheHeader.vue';
 import Footer from './components/TheFooter.vue';
@@ -27,7 +26,7 @@ import Footer from './components/TheFooter.vue';
 
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-image: url("../../assets/images/bg.jpg");
+  background-image: url("/images/bg.jpg");
   background-size: cover;
   background-position: center center;
 }

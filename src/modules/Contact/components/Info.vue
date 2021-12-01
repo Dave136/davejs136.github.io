@@ -2,7 +2,7 @@
   <section class="info-wrapper">
     <div class="info">
       <div class="info-icon">
-        <PersonIcon style="color: #fff" />
+        <img class="img" :src="personIcon" alt="person icon" />
       </div>
       <div class="info-content">
         <div class="info-text">David Arenas</div>
@@ -10,7 +10,7 @@
     </div>
     <div class="info">
       <div class="info-icon">
-        <LocationIcon style="color: #fff" />
+        <img class="img" :src="locationIcon" alt="location icon" />
       </div>
       <div class="info-content">
         <div class="info-text">Caracas, Venezuela</div>
@@ -18,7 +18,7 @@
     </div>
     <div class="info">
       <div class="info-icon">
-        <EmailIcon style="color: #fff" />
+        <img class="img" :src="mailIcon" alt="mail icon" />
       </div>
       <div class="info-content">
         <div class="info-text">davejs136@gmail.com</div>
@@ -26,7 +26,7 @@
     </div>
     <div class="info">
       <div class="info-icon">
-        <PhoneIcon style="color: #fff" />
+        <img class="img" :src="callIcon" alt="call icon" />
       </div>
       <div class="info-content">
         <div class="info-text">+58 412 023 9639"</div>
@@ -38,10 +38,15 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue';
 import gsap from 'gsap';
-import PersonIcon from '../../../assets/images/person-outline.svg';
-import LocationIcon from '../../../assets/images/location-outline.svg';
-import EmailIcon from '../../../assets/images/mail-outline.svg';
-import PhoneIcon from '../../../assets/images/call-outline.svg';
+
+const getImageUrl = (name: string) =>
+  new URL(`/images/${name}.svg`, import.meta.url).href;
+
+const personIcon = getImageUrl('person');
+const locationIcon = getImageUrl('location');
+const mailIcon = getImageUrl('mail');
+const callIcon = getImageUrl('call');
+
 
 const tl = gsap.timeline({ defaults: { duration: 1, opacity: 1 } });
 
@@ -81,5 +86,9 @@ onMounted(() => {
 .info-text {
   font-size: 0.75rem;
   color: rgb(199, 199, 199);
+}
+
+.img {
+  color: #fff;
 }
 </style>
