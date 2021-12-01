@@ -2,7 +2,7 @@
   <header class="header">
     <Burger />
     <div class="logo">
-      <img src="/images/logo.svg" alt="logo" />
+      <img :src="logo" alt="logo" />
     </div>
   </header>
 </template>
@@ -11,6 +11,9 @@
 import { onMounted } from "vue";
 import gsap from "gsap";
 import Burger from "./Burger.vue";
+import { getImageUrl } from "../../../utils";
+
+const logo = import.meta.env.DEV ? getImageUrl('logo') : '/images/logo.svg';
 
 onMounted(() => {
   const logo = document.querySelector(".logo");

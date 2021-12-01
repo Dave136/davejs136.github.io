@@ -1,4 +1,4 @@
-import { createApp, defineAsyncComponent } from 'vue';
+import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 import App from './App.vue';
@@ -29,10 +29,7 @@ const start = async () => {
   app.config.globalProperties.services = globalService;
 
   globalComponents.forEach((component: any) => {
-    const asyncComponent = defineAsyncComponent(
-      () => import(/* @vite-ignore */ component.path),
-    );
-    app.component(component.name, asyncComponent);
+    app.component(component.name, component.component);
   });
 
   app.use(router);

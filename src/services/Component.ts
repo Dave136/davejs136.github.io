@@ -1,6 +1,6 @@
 interface ComponentRegister {
   name: string;
-  path: string;
+  component: any;
 }
 
 export interface ComponentService {
@@ -37,7 +37,7 @@ export default class Component implements ComponentService {
 
     this.components[type].push({
       name: component.name,
-      path: component.path,
+      component: component.component,
     });
 
     return this.components;

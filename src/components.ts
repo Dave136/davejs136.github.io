@@ -1,10 +1,11 @@
+import { defineAsyncComponent } from 'vue';
 import type { Services } from './globalService';
 
 // Layouts
 const layouts = [
   {
     name: 'Layout',
-    path: './core/Layout/Layout.vue',
+    component: defineAsyncComponent(() => import('./core/Layout/Layout.vue')),
   },
 ];
 
@@ -12,7 +13,7 @@ const layouts = [
 const errors = [
   {
     name: '404',
-    path: './core/ErrorPage/404.vue',
+    component: defineAsyncComponent(() => import('./core/ErrorPage/404.vue')),
   },
 ];
 

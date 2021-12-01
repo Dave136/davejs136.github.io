@@ -38,14 +38,12 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue';
 import gsap from 'gsap';
+import { getImageUrl } from '../../../utils';
 
-const getImageUrl = (name: string) =>
-  new URL(`/images/${name}.svg`, import.meta.url).href;
-
-const personIcon = getImageUrl('person');
-const locationIcon = getImageUrl('location');
-const mailIcon = getImageUrl('mail');
-const callIcon = getImageUrl('call');
+const personIcon = import.meta.env.DEV ? getImageUrl('person') : '/images/person.svg';
+const locationIcon = import.meta.env.DEV ? getImageUrl('location') : '/images/location.svg';
+const mailIcon = import.meta.env.DEV ? getImageUrl('mail') : '/images/mail.svg';
+const callIcon = import.meta.env.DEV ? getImageUrl('call') : '/images/call.svg';
 
 
 const tl = gsap.timeline({ defaults: { duration: 1, opacity: 1 } });
