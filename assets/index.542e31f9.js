@@ -1,0 +1,1 @@
+import{_ as o}from"./index.79c6b532.js";import"./vendor.0d9ee3c4.js";const r=()=>o(()=>import("./Home.2ee809d4.js"),["assets/Home.2ee809d4.js","assets/Home.973e0bc3.css","assets/index.0e78106e.js","assets/vendor.0d9ee3c4.js"]);async function s(e){e.Router.registerRoutes([{path:"/",name:"Home",component:r}])}export{s as default};
